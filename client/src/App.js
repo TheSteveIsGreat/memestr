@@ -20,6 +20,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/posts' element={<Posts />} />
+            <Route path='/comments' element={<Comments />} />
             <Route path='*' element={<NotFound />} />
 
             {/* Protected (need to be logged in to see) */}
