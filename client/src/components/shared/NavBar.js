@@ -30,7 +30,7 @@ const NavBar = () => {
       return (
         <>
           <Link to='/'>Home</Link>
-          <Link to='/home'>Home Protected</Link>
+          <Link to='/new_post'>New Post</Link>
         </>
       )
     }
