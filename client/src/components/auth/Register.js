@@ -14,12 +14,13 @@ const Register = () => {
   // Function to prevent page reload and 
   // call handleRegister from the AuthProvider.js component
   const handleSubmit = (e) => {
+    console.log(e)
     e.preventDefault()
 
       // Thanks to devise_token_auth set in DB, 
       // Email must be a unique and 'valid' email
       // Password must be greater than 6 chars in length
-      (auth.handleRegistration({ email, password, name }))
+      auth.handleRegistration({ email, password, name })
   }
 
   return (
