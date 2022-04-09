@@ -36,7 +36,7 @@ const Posts = () => {
   const renderComments = (id) => {
     console.log('id: ', id)
     let filteredComments = comments.filter((c) => c.post_id == id)
-    console.log('filtered comments:', filteredComments[0].input)
+    console.log('filtered comments:', filteredComments[0])
     if (comments) {
     return (
       <div>
