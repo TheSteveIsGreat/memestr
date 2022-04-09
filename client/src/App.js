@@ -14,6 +14,7 @@ import NewComment from './components/auth/comment/NewComment';
 import Posts from './components/auth/post/Posts';
 import Categories from './components/auth/post/Categories';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Favorites from './components/auth/comment/Favorites';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
               <Route path="/comment_show" element={<CommentShow />} />
               <Route path="/new_comment" element={<NewComment />} />
               <Route path="/categories" element={<Categories/>} />
-              {/* <Route path="/favorites" element={<Favorites />} /> */}
+              <Route path="/favorites" element={<Favorites />} />
             </Route>
           </Routes>
         </>
