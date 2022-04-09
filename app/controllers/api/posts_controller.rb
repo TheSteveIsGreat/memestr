@@ -38,13 +38,13 @@ class Api::PostsController < ApplicationController
     end
   
     private
-    #function that allows @user to find specific user
+    #function that allows @post to find specific user
     def set_post
         @post = Post.find(params[:id])
     end
   
-    #function for users that requires a name to create a user for DB
-    #must require a username to work
+    #function for users that requires a name to create a post for DB
+    #must require a () to work
     def post_params
         params.require(:post).permit(:title, :meme, :user_id)
     end
