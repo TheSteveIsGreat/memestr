@@ -1,13 +1,10 @@
-import React from 'react'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-
+import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Posts = () => {
-  const [posts, setPosts] = useState([])
-  const [comments, setComments] = useState([])
-  const [likes, setLikes] = useState(null)
+  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getPosts()
@@ -20,20 +17,20 @@ const Posts = () => {
       // console.log(res)
       setPosts(res.data)
     } catch (error) {
-      alert ('Error occurred getting posts')
-      console.log(error)
-    }   
-  }
+      alert("Error occurred getting posts");
+      console.log(error);
+    }
+  };
 
   const getComments = async () => {
     try {
-      let res = await axios.get('/api/comments')
-      setComments(res.data)
+      let res = await axios.get("/api/comments");
+      setComments(res.data);
     } catch (error) {
-      alert ('Error occurred getting comments')
-      console.log(error)
+      alert("Error occurred getting comments");
+      console.log(error);
     }
-  }
+  };
 
   const handlePostLike = async (id) => {
     let filteredPosts = posts.find((c) => c.post_id == id)
@@ -67,7 +64,7 @@ const Posts = () => {
   const renderPosts = () => {
     return posts.map((p) => {
       return (
-        <div key={p.id} style={{border: '1px solid', maxWidth: '500px'}}>
+        <div key={p.id} style={{ border: "1px solid", maxWidth: "500px" }}>
           <h3>{p.title}</h3>
           <img src={p.meme} style={{maxBlockSize: '300px'}}></img>
           <button onClick={handlePostLike}>❤️  {p.like}</button>
@@ -88,4 +85,16 @@ const Posts = () => {
   </>)
 }
 
-export default Posts
+  return (
+    <>
+      <h1>Posts</h1>
+      {renderPosts()}
+      <p>Posts</p>
+      <p>{JSON.stringify(posts)}</p>
+      <p>Comments</p>
+      <p>{JSON.stringify(comments)}</p>
+    </>
+  );
+};
+
+export default Posts;

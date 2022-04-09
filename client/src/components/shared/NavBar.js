@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Menu } from "antd";
 import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 
 const NavBar = () => {
@@ -33,13 +33,13 @@ const NavBar = () => {
         <>
           <Breadcrumb>
             <Breadcrumb.Item href="/posts">
-              <HomeOutlined />
+              <UserOutlined />
+              <span>Posts</span>
             </Breadcrumb.Item>
             <Breadcrumb.Item href="/new_post">
-              <UserOutlined />
               <span>New Post</span>
             </Breadcrumb.Item>
-            <Link to="/favorites">Favorites</Link>
+            <Link to="/posts/favorites">Favorites</Link>
           </Breadcrumb>
         </>
       );
