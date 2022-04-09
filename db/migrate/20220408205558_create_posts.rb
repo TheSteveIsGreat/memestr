@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :meme
       t.integer :like
       t.integer :dislike
+      t.string :categories
       t.string :share
       t.belongs_to :user, null: false, foreign_key: true
 

@@ -1,18 +1,19 @@
-import "./App.css";
-import NavBar from "./components/shared/NavBar";
-import { Routes, Route } from "react-router-dom";
-import Home from "./components/shared/Home";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
-import NotFound from "./components/shared/NotFound";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
-import FetchUser from "./components/auth/FetchUser";
-import PostShow from "./components/auth/post/PostShow";
-import NewPost from "./components/auth/post/NewPost";
-import CommentShow from "./components/auth/comment/CommentShow";
-import NewComment from "./components/auth/comment/NewComment";
-import Posts from "./components/auth/post/Posts";
-import Favorites from "./components/auth/comment/Favorites";
+import './App.css';
+import NavBar from './components/shared/NavBar';
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/shared/Home';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import NotFound from './components/shared/NotFound';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+import FetchUser from './components/auth/FetchUser';
+import PostShow from './components/auth/post/PostShow';
+import NewPost from './components/auth/post/NewPost';
+import CommentShow from './components/auth/comment/CommentShow';
+import NewComment from './components/auth/comment/NewComment';
+import Posts from './components/auth/post/Posts';
+import Categories from './components/auth/post/Categories';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
               <Route path="/new_post" element={<NewPost />} />
               <Route path="/comment_show" element={<CommentShow />} />
               <Route path="/new_comment" element={<NewComment />} />
-              <Route path="/favorites" element={<Favorites />} />
+              <Route path="/categories" element={<Categories/>} />
+              {/* <Route path="/favorites" element={<Favorites />} /> */}
             </Route>
           </Routes>
         </>

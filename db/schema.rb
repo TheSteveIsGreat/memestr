@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_04_09_195402) do
     t.string "meme"
     t.integer "like"
     t.integer "dislike"
+    t.string "categories"
     t.string "share"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
