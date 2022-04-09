@@ -12,6 +12,7 @@ import NewPost from './components/auth/post/NewPost';
 import CommentShow from './components/auth/comment/CommentShow';
 import NewComment from './components/auth/comment/NewComment';
 import Posts from './components/auth/post/Posts';
+import Categories from './components/auth/post/Category';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/categories' element={<Categories />} />
             <Route path='*' element={<NotFound />} />
 
             {/* Protected (need to be logged in to see) */}
