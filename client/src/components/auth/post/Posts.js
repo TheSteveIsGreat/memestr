@@ -9,6 +9,7 @@ const Posts = () => {
 
   useEffect(() => {
     getPosts()
+    getComments()
   }, [])
   
   const getPosts = async () => {
@@ -33,15 +34,18 @@ const Posts = () => {
   }
 
   const renderComments = (id) => {
+    console.log('id: ', id)
     let filteredComments = comments.filter((c) => c.post_id == id)
-    console.log('filtered comments:', filteredComments)
+    console.log('filtered comments:', filteredComments[0].input)
+    if (comments) {
     return (
       <div>
-        <p>{filteredComments.input}</p>
-        <button>❤️  {filteredComments.like}</button>
-        <button>👎  {filteredComments.dislike}</button>
+        <p>{filteredComments[0].input}</p>
+        <button>❤️  {filteredComments[0].like}</button>
+        <button>👎  {filteredComments[0].dislike}</button>
       </div>
     )
+    }
   }
 
   const renderPosts = () => {
@@ -53,7 +57,7 @@ const Posts = () => {
           <button>❤️  {p.like}</button>
           <button>👎  {p.dislike}</button>
           <div>
-            {renderComments(p.id)}
+            {comments && renderComments(p.id)}
           </div>
         </div>
       )
