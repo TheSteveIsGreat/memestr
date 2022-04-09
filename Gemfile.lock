@@ -77,6 +77,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    ancestry (4.1.0)
+      activerecord (>= 5.2.6)
     annotate (3.2.0)
       activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
@@ -189,6 +191,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  ancestry
   annotate
   better_errors
   binding_of_caller
