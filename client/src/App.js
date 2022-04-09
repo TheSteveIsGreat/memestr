@@ -30,7 +30,7 @@ function App() {
             {/* Protected (need to be logged in to see) */}
             <Route element={<ProtectedRoute />}>
               <Route path="/posts" element={<Posts />} />
-              <Route path="/posts_show" element={<PostShow />} />
+              <Route path="/post_show/:id" element={<PostShow />} />
               <Route path="/new_post" element={<NewPost />} />
               <Route path="/comment_show" element={<CommentShow />} />
               <Route path="/new_comment" element={<NewComment />} />

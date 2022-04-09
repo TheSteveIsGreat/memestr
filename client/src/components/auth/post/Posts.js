@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -32,14 +33,25 @@ const Posts = () => {
     }
   };
 
+  const handlePostLike = async (id) => {
+    let filteredPosts = posts.find((c) => c.post_id == id)
+    return filteredPosts.map((c) => {
+      c.like++
+    })
+  }
+
+  // const handleCommentLike = (id) => {
+
+  // }
+
   const renderComments = (id) => {
     // console.log('id: ', id)
     let filteredComments = comments.filter((c) => c.post_id == id)
-    console.log('filtered comments:', filteredComments[0])
+    // console.log('filtered comments:', filteredComments[0])
     if (filteredComments[0]) {
       return filteredComments.map ((c) => {
     return (
-      <div>
+      <div key={c.id}>
         <p>{c.input}</p>
         <button>❤️  {c.like}</button>
         <button>👎  {c.dislike}</button>
@@ -56,8 +68,9 @@ const Posts = () => {
         <div key={p.id} style={{ border: "1px solid", maxWidth: "500px" }}>
           <h3>{p.title}</h3>
           <img src={p.meme} style={{maxBlockSize: '300px'}}></img>
-          <button>❤️  {p.like}</button>
+          <button onClick={handlePostLike}>❤️  {p.like}</button>
           <button>👎  {p.dislike}</button>
+          <Link to={`/post_show/${p.id}`}>View Post</Link>
           <div>
             {comments && renderComments(p.id)}
           </div>
@@ -70,12 +83,7 @@ const Posts = () => {
   <>
   <h1>Posts</h1>
   {renderPosts()}
-  <p>Posts</p>
-  <p>{JSON.stringify(posts)}</p>
-  <p>Comments</p>
-  <p>{JSON.stringify(comments)}</p>
   </>)
 }
-
 
 export default Posts;
