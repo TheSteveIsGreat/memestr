@@ -85,16 +85,4 @@ const Posts = () => {
   </>)
 }
 
-  return (
-    <>
-      <h1>Posts</h1>
-      {renderPosts()}
-      <p>Posts</p>
-      <p>{JSON.stringify(posts)}</p>
-      <p>Comments</p>
-      <p>{JSON.stringify(comments)}</p>
-    </>
-  );
-};
-
 export default Posts;
