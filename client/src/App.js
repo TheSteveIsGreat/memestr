@@ -13,6 +13,7 @@ import CommentShow from './components/auth/comment/CommentShow';
 import NewComment from './components/auth/comment/NewComment';
 import Posts from './components/auth/post/Posts';
 import Categories from './components/auth/post/Categories';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

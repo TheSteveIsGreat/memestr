@@ -39,7 +39,7 @@ u1.posts.create(
   like: 20,
   dislike: 100,
   share: '',
-  tags: cat.sample
+  categories: cat.sample
                )
 
 u1.posts.create(
@@ -48,7 +48,7 @@ u1.posts.create(
   like: 10,
   dislike: 200,
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 
                )
 
@@ -58,7 +58,7 @@ u1.posts.create(
   like: 30,
   dislike: 6000,
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 
                )
 
@@ -68,7 +68,7 @@ u2.posts.create(
   like: 400, 
   dislike: 5, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 )
 
 u2.posts.create(
@@ -77,7 +77,7 @@ u2.posts.create(
   like: 1000, 
   dislike: 1, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
   )
 
 u2.posts.create(
@@ -86,7 +86,7 @@ u2.posts.create(
   like: 300, 
   dislike: 3, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 )
 
 u3.posts.create(
@@ -95,7 +95,7 @@ u3.posts.create(
   like: 1, 
   dislike: 1, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 )
 
 u3.posts.create(title: "Oh no she didnt", 
@@ -103,7 +103,7 @@ u3.posts.create(title: "Oh no she didnt",
   like: 155, 
   dislike: 61, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 )
 
 u3.posts.create(
@@ -112,7 +112,7 @@ u3.posts.create(
   like: 123, 
   dislike: 15, 
   share: '',
-  tags: cat.sample
+  categories: cat.sample
 )
 
 u1.comments.create(

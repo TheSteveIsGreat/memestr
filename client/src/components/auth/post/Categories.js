@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
 import useAxios from 'axios-hooks';
-import {Form} from "antd"
-
+import {Form, Table} from 'react-bootstrap'
+ 
 
 const Categories = (props) => {
 const [{data: posts, loading, error}] = useAxios('/api/posts');
 const[filteredCats, setFilteredCats] = useState(null);
-
+console.log(posts)
 if(error) return <p>Error occurred</p>; 
 if(loading) return <p>Loading...</p>; 
  
 const getUniqueCats = () => {
   return posts.reduce((accum, d) => {
-    if (!accum.includes(d.tags)) {
-      accum.push(d.tags);
+    if (!accum.includes(d.category)) {
+      accum.push(d.category);
+      console.log(accum)
     }
 return accum; 
   }, []);
@@ -21,11 +22,12 @@ return accum;
 
 const handleSelect = (event) => {
   let selectedCat = event.target.value;
-  setFilteredCats(posts.filter((p) => p.tags === selectedCat))
+  setFilteredCats(posts.filter((p) => p.category === selectedCat))
 }
 
 
-const renderSelect = (tags) => {
+const renderSelect = (categories) => {
+  console.log(categories)
   return (
     <Form.Select 
     defaultValue={'DEFAULT'}
@@ -37,9 +39,11 @@ const renderSelect = (tags) => {
     disabled 
     hidden
     >Choose a category</option>
-    {tags.map((tag)=> (
-      <option value={tag}>{tag}</option>
-    ))}
+    {categories.map((category)=>{
+    
+    console.log(category)
+      return <option value={category}>{category}</option>
+    })}
     </Form.Select>
   )
 }
@@ -53,24 +57,43 @@ const getSelect = () => {
 
 const renderFilteredCatPosts = () => {
   if (!filteredCats) {
-    return <p></p>;
+    return <p>YO YO! </p>;
     }
 
 
-return(
-<div>
-{filteredCats.map((c) => (
-  <p> {c.meme} </p>
 
-))}
-</div>
-)
-};
+return (
+  <Table striped bordered hover>
+    <thead>
+      <tr>
+        <th>Meme</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {filteredCats.map((c) =>(
+        <tr>
+          <td>{c.title}</td>
+          <td>{c.meme}</td>
+      
+        </tr>
+      ))}
+    </tbody>
+  </Table>
+      );
+   };
+
+
+
 return (
   <div>
-    <h1>Memes by Categtory</h1>
-    <p>{getSelect()}</p>
-    <p>{renderFilteredCatPosts()}</p>
+    <h1>Memes by Category</h1>
+    
+    
+    {getSelect()}
+  
+    {renderFilteredCatPosts()}
+  
 
   </div>
 )
