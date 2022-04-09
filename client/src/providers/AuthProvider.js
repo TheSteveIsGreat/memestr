@@ -46,7 +46,7 @@ const AuthProvider = ({children}) => {
       let res = await axios.post('/api/auth/sign_in', user)
       setUser(res.data.data)
       // Navigates to UserProtected component
-      navigate('/')
+      navigate('/posts')
     } catch (error) {
       alert ('Error logging in. Is your email and password valid?')
       console.log(error)

@@ -11,6 +11,7 @@ import PostShow from './components/auth/post/PostShow';
 import NewPost from './components/auth/post/NewPost';
 import CommentShow from './components/auth/comment/CommentShow';
 import NewComment from './components/auth/comment/NewComment';
+import Posts from './components/auth/post/Posts';
 
 function App() {
   return (
@@ -23,12 +24,11 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/comments' element={<Comments />} />
-            <Route path='/home' element={<Home />} />
             <Route path='*' element={<NotFound />} />
 
             {/* Protected (need to be logged in to see) */}
             <Route element={<ProtectedRoute />}>
+              <Route path='/posts' element={<Posts />} />
               <Route path= '/post_show' element={<PostShow />} />
               <Route path= '/new_post' element={<NewPost />} />
               <Route path= '/comment_show' element={<CommentShow />} />

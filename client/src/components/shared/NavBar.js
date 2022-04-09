@@ -29,11 +29,16 @@ const NavBar = () => {
     if (auth.user) {
       return (
         <>
-          <Link to='/'>Home</Link>
+          <Link to='/posts'>Home</Link>
           <Link to='/new_post'>New Post</Link>
         </>
       )
     }
+    return (
+      <>
+        <Link to='/'>Home</Link>
+      </>
+    )
   }
 
   return (
