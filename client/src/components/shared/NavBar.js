@@ -39,7 +39,7 @@ const NavBar = () => {
             <Breadcrumb.Item href="/new_post">
               <span>New Post</span>
             </Breadcrumb.Item>
-            <Link to="/posts/favorites">Favorites</Link>
+            <Link to="/favorites">Favorites</Link>
           </Breadcrumb>
         </>
       );
