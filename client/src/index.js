@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import AuthProvider from './providers/AuthProvider';
-import { initMiddleware } from 'devise-axios';
+import AuthProvider from "./providers/AuthProvider";
+import { initMiddleware } from "devise-axios";
+import "antd/dist/antd.css";
 
 // This gets the token from the api calls and then sets them to be sent
 // on the next api call. It also stores the token info to localStorage
-initMiddleware()
+initMiddleware();
 
 ReactDOM.render(
   <BrowserRouter>
