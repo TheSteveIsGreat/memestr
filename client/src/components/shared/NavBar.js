@@ -32,15 +32,25 @@ const NavBar = () => {
       return (
         <>
           <Breadcrumb>
+            
             <Breadcrumb.Item href="/posts">
               <UserOutlined />
               <span>Posts</span>
+            </Breadcrumb.Item>
+            
+            <Breadcrumb.Item href="/categories">
+              <span>Categories</span>
             </Breadcrumb.Item>
             <Breadcrumb.Item href="/new_post">
               <span>New Post</span>
             </Breadcrumb.Item>
             <Link to="/posts/favorites">Favorites</Link>
+  
+
+          
+          
           </Breadcrumb>
+          
         </>
       );
     }

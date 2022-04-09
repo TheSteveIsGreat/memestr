@@ -72,7 +72,7 @@ return (
     </thead>
     <tbody>
       {filteredCats.map((c) =>(
-        <tr>
+        <tr key={c.id}>
           <td>{c.title}</td>
           <td>{c.meme}</td>
       
