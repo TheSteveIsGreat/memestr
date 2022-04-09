@@ -1,9 +1,9 @@
 const PostShow = () => {
   return (
     <>
-    <h1>Post Show</h1>
+      <h1>Post Show</h1>
     </>
-  )
-}
+  );
+};
 
-export default PostShow
+export default PostShow;
