@@ -15,7 +15,7 @@ const Posts = () => {
   const getPosts = async () => {
     try {
       let res = await axios.get('/api/posts/')
-      console.log(res)
+      // console.log(res)
       setPosts(res.data)
     } catch (error) {
       alert ('Error occurred getting posts')
@@ -34,18 +34,21 @@ const Posts = () => {
   }
 
   const renderComments = (id) => {
-    console.log('id: ', id)
+    // console.log('id: ', id)
     let filteredComments = comments.filter((c) => c.post_id == id)
     console.log('filtered comments:', filteredComments[0])
-    if (comments) {
+    if (filteredComments[0]) {
+      return filteredComments.map ((c) => {
     return (
       <div>
-        <p>{filteredComments[0].input}</p>
-        <button>❤️  {filteredComments[0].like}</button>
-        <button>👎  {filteredComments[0].dislike}</button>
+        <p>{c.input}</p>
+        <button>❤️  {c.like}</button>
+        <button>👎  {c.dislike}</button>
       </div>
     )
+      })
     }
+    return (<p>No comments have been added</p>)
   }
 
   const renderPosts = () => {
@@ -63,10 +66,6 @@ const Posts = () => {
       )
     })
   }
-  
-  
-  
-  
   
   return (
   <>
