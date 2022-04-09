@@ -16,40 +16,40 @@ u3 = User.create(name: 'Trina',
                  image:'https://static.wikia.nocookie.net/ladygaga/images/2/2e/Beyonc%C3%A9.jpg/revision/latest?cb=20200718185948')
 
 u1.posts.create(title: 'liek dis if u cry evrytim',
-               meme: '',
+               meme: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=417&q=80',
                like: 20,
                dislike: 100,
                share: '',
                )
 
 u1.posts.create(title: 'I hate everything',
-               meme: '',
+               meme: 'https://images.unsplash.com/photo-1607317146126-64b09b69eb4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
                like: 10,
                dislike: 200,
                share: '',
                )
 
 u1.posts.create(title: 'This is fine',
-               meme: '',
+               meme: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
                like: 30,
                dislike: 6000,
                share: '',
                )
 
 u2.posts.create(title: 'DogeCoin', 
-               meme: 'emptyurl.com', 
+               meme: 'https://images.unsplash.com/photo-1625637870692-ddd9cd870757?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', 
                like: 400, 
                dislike: 5, 
                share: '')
 
 u2.posts.create(title: 'A bug: A coders best friend',
-               meme: 'emptyurl.com',
+               meme: 'https://images.unsplash.com/photo-1561131989-b8112bafbd43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
                like: 1000, 
                dislike: 1, 
                share: '')
 
 u2.posts.create(title: 'Meet me at the SPACE-bar',
-               meme: 'emptyurl.com', 
+               meme: 'https://images.unsplash.com/photo-1610898564097-e28bd69740a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', 
                like: 300, 
                dislike: 3, 
                share: '')
@@ -62,19 +62,19 @@ u3.posts.create(title: "Oh no she didnt",
 
 u3.posts.create(title: "Oh no she didnt", 
                 meme: 'https://i.imgur.com/F6v1jHY.jpeg', 
-                like: 1, 
-                dislike: 1, 
+                like: 155, 
+                dislike: 61, 
                 share: '')
 
 u3.posts.create(title: "Oh no she didnt", 
                 meme: 'https://i.imgur.com/F6v1jHY.jpeg', 
-                like: 1, 
-                dislike: 1, 
+                like: 123, 
+                dislike: 15, 
                 share: '')
 
 u1.comments.create(input: 'Wow you have the coolest life ever!',
                    like: 0,
-                   dislike: 0,
+                   dislike: 340,
                    post_id: 1)
 
 u1.comments.create(input: 'I dont wanna grow up, im a toys-r-us kid',
